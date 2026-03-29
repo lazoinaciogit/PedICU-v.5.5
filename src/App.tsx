@@ -1467,9 +1467,9 @@ export default function App() {
                         {pacienteAtual.evolucao.output && (
                           <div className="space-y-2">
                             <textarea 
-                              readOnly
-                              className="w-full bg-black text-[var(--primary)] font-mono text-xs p-4 rounded-lg min-h-[300px] border border-gray-800"
+                              className="w-full bg-black text-[var(--primary)] font-mono text-xs p-4 rounded-lg min-h-[300px] border border-gray-800 focus:border-[var(--primary)] outline-none"
                               value={pacienteAtual.evolucao.output}
+                              onChange={(e) => updateEvolucao('output', e.target.value)}
                             />
                             <button 
                               onClick={() => copyToClipboard(pacienteAtual.evolucao.output)}
